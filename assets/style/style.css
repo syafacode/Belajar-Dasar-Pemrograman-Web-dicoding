@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 20px;
+    overflow: auto;
+}
+
+header {
+    display: inline;
+}
+
+nav {
+    background: linear-gradient(315deg, #272727, rgb(12, 16, 34));
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+
+nav li {
+    display: inline;
+    list-style-type: none;
+    margin: 20px;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+#content {
+    float: left;
+    width: 75%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    background-color: var(--card-bg-color);
+}
+
+.jumbotron {
+    background-image: url(../img/header.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    font-size: 20px;
+    padding: 60px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.863);
+}
+
+header>.jumbotron>h1 {
+    letter-spacing: 20px;
+}
+
+header>.jumbotron>p {
+    font-size: 16px;
+}
+
+.profile header {
+    text-align: center;
+}
+
+.profile img {
+    width: 175px;
+}
+
+.paragraph {
+    text-indent: 2em;
+}
+
+h2 {
+    color: #000000 var(--secondary-color);
+}
+
+h3 {
+    color: #000000 var(--secondary-color);
+}
+
+em {
+    text-shadow: var(--text-shadow);
+}
+
+a {
+    color: var(--font-color);
+    text-decoration: none;
+    text-shadow: var(--text-shadow);
+}
+
+a:hover {
+    text-shadow: var(--hover-text)
+}
+
+.featured-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background: linear-gradient(315deg, #272727, rgb(12, 16, 34));
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 3px;
+    word-spacing: 5px;
+}
+
+footer>p>span {
+    margin: 10px;
+}
+
+footer>p>span>a {
+    text-decoration: none;
+    color: white;
+    font-size: 36px;
+}
+
+footer>p>span>a:hover {
+    text-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+footer>p {
+    text-transform: uppercase;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #e0e0ec;
+}
+
+table {
+    width: 100%;
+    margin: 10px;
+}
+
+th,
+td {
+    text-align: left;
+    width: 50%;
+}
+
+.menengah {
+    text-align: center;
+}
+
+figure>img {
+    border-radius: 50%;
+    border: solid 2px white;
+}
+
+
+/* DARK MODE */
+:root {
+    --card-bg-color: #fff;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
+    --text-shadow: 0px 0px 10px #64646488;
+    --hover-text: 0px 0px 10px #000000cc;
+}
+
+[data-theme="dark"] {
+    --card-bg-color: #0505052d;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #202733;
+    --heading-color: #818cab;
+    --text-shadow: 0px 0px 10px #ffffff88;
+    --hover-text: 0px 0px 10px #ffffff;
+}
+
+.mati {
+    margin-left: 35px;
+    margin-top: 8px;
+}
+
+.theme-switch-wrapper {
+    float: right;
+    margin-right: 10px;
+}
+
+.theme-switch {
+    display: inline-block;
+    height: 34px;
+    position: relative;
+    width: 60px;
+}
+
+.theme-switch input {
+    display: none;
+}
+
+.slider {
+    background-color: #ccc;
+    bottom: 0;
+    cursor: pointer;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: .4s;
+}
+
+.slider:before {
+    background-color: #fff;
+    bottom: 4px;
+    content: "";
+    height: 26px;
+    left: 4px;
+    position: absolute;
+    transition: .4s;
+    width: 26px;
+}
+
+input:checked+.slider {
+    background-color: #2B376C;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+/* untuk tab dan android */
+@media screen and (max-width: 1250px) {
+
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 490px) {
+
+    #content,
+    aside {
+        padding: 0;
+    }
+
+    nav {
+        padding: 1px;
+    }
+
+    header>.jumbotron>h1 {
+        letter-spacing: 2px;
+    }
+
+    footer>p>span {
+        margin: 0;
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    #content,
+    aside {
+        padding: 0;
+    }
+
+    nav {
+        padding: 1px;
+    }
+
+    nav li {
+        margin: 20px 5px;
+    }
+
+    header>.jumbotron>h1 {
+        letter-spacing: 2px;
+    }
+
+    footer>p {
+        font-size: 14px;
+    }
+
+    footer>p>span>a {
+        font-size: 20px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 325px) {
+
+    #content,
+    aside {
+        padding: 0;
+    }
+
+    nav {
+        padding: 1px;
+    }
+
+    nav li {
+        margin: 20px 0px;
+    }
+
+    nav li a {
+        font-size: 14px;
+    }
+
+    header>.jumbotron>h1 {
+        letter-spacing: 0;
+        font-size: 27px;
+    }
+
+    .profile img {
+        width: 130px;
+    }
+
+    footer>p {
+        font-size: 8px;
+    }
+
+    .copyright {
+        font-size: 7px;
+    }
+}
+
+@media screen and (max-width: 285px) {
+    .hidden {
+        display: none;
+    }
+}
